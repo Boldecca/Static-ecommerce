@@ -2,12 +2,12 @@ import { Link } from "react-router-dom"
 
 function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-dark via-dark-lighter to-dark py-20 md:py-32">
+    <section className="relative bg-black py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             The Future of Technology{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               Starts Here
             </span>
           </h1>

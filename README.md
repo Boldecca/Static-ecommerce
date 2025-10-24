@@ -156,7 +156,7 @@ This project can be deployed to:
 
 ## 📸 Screenshots
 
-![Homepage](screenshot-home.png)
+![Homepage]()
 *Modern homepage with hero section and featured products*
 
 ## 🎯 Learning Outcomes
@@ -172,8 +172,5 @@ This project demonstrates:
 
 ## 👨‍💻 Author
 
-[Your Name]
+MUTETERI REBECCA
 
-## 📝 License
-
-This project is open source and available under the MIT License.
