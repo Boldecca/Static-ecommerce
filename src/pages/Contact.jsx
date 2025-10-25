@@ -18,16 +18,16 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
     alert(`Thank you ${formData.name}! We've received your message and will get back to you soon.`)
     setFormData({ name: "", email: "", message: "" })
   }
 
   return (
-    <div className="py-16 bg-dark min-h-screen">
+    <div className="py-16 bg-gray-900 min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
           <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
@@ -36,36 +36,39 @@ function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
             <div className="space-y-6">
+              {/* Email */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-700/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-2xl">📧</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Email</h3>
+                  <h3 className="font-semibold mb-1">Email</h3>
                   <p className="text-gray-400">support@techstore.com</p>
                   <p className="text-gray-400">sales@techstore.com</p>
                 </div>
               </div>
 
+              {/* Phone */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-700/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-2xl">📞</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Phone</h3>
+                  <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-gray-400">+1 (555) 123-4567</p>
                   <p className="text-gray-400">Mon-Fri: 9AM - 6PM EST</p>
                 </div>
               </div>
 
+              {/* Address */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-blue-700/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-2xl">📍</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Address</h3>
+                  <h3 className="font-semibold mb-1">Address</h3>
                   <p className="text-gray-400">123 Tech Street</p>
                   <p className="text-gray-400">Silicon Valley, CA 94025</p>
                   <p className="text-gray-400">United States</p>
@@ -73,18 +76,19 @@ function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-dark-lighter border border-dark-border rounded-xl">
-              <h3 className="text-white font-semibold mb-3">Business Hours</h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between text-gray-400">
+            {/* Business Hours */}
+            <div className="mt-8 p-6 bg-gray-800 border border-gray-700 rounded-xl">
+              <h3 className="font-semibold mb-3">Business Hours</h3>
+              <div className="space-y-2 text-sm text-gray-400">
+                <div className="flex justify-between">
                   <span>Monday - Friday</span>
                   <span>9:00 AM - 6:00 PM</span>
                 </div>
-                <div className="flex justify-between text-gray-400">
+                <div className="flex justify-between">
                   <span>Saturday</span>
                   <span>10:00 AM - 4:00 PM</span>
                 </div>
-                <div className="flex justify-between text-gray-400">
+                <div className="flex justify-between">
                   <span>Sunday</span>
                   <span>Closed</span>
                 </div>
@@ -93,8 +97,8 @@ function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-dark-lighter border border-dark-border rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
+          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -107,8 +111,8 @@ function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
                   placeholder="John Doe"
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
                 />
               </div>
 
@@ -123,8 +127,8 @@ function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
                   placeholder="john@example.com"
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
                 />
               </div>
 
@@ -139,14 +143,14 @@ function Contact() {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-dark border border-dark-border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors resize-none"
                   placeholder="Tell us how we can help you..."
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Send Message
               </button>
@@ -159,3 +163,4 @@ function Contact() {
 }
 
 export default Contact
+c
