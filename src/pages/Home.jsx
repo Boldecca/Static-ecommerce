@@ -102,19 +102,19 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">10K+</div>
+              <div className="text-4xl font-bold text-white mb-2">10K+</div>
               <div className="text-gray-400 text-sm">Happy Customers</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-4xl font-bold text-white mb-2">500+</div>
               <div className="text-gray-400 text-sm">Products</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-4xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-400 text-sm">Support</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">99%</div>
+              <div className="text-4xl font-bold text-white mb-2">99%</div>
               <div className="text-gray-400 text-sm">Satisfaction</div>
             </div>
           </div>
