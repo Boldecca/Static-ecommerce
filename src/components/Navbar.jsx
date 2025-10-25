@@ -17,25 +17,34 @@ function Navbar() {
   ]
 
   return (
-    <nav className="bg-dark-lighter border-b border-dark-border sticky top-0 z-50">
+    <nav className="bg-[#0f1117]/95 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50 shadow-md transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">T</span>
+          {/* 🔹 Logo Section */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 rounded-2xl shadow-lg shadow-indigo-500/30 transition-transform transform group-hover:scale-110 duration-300">
+              <span className="text-white font-extrabold text-xl tracking-tight drop-shadow-sm">
+                T
+              </span>
+              {/* Soft glow on hover */}
+              <div className="absolute inset-0 rounded-2xl blur-lg bg-gradient-to-br from-indigo-500/40 to-pink-500/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-            <span className="text-xl font-bold text-white">TechStore</span>
+
+            <span className="text-2xl font-semibold bg-gradient-to-r from-indigo-400 to-pink-400 text-transparent bg-clip-text tracking-wide group-hover:from-indigo-300 group-hover:to-pink-300 transition-all duration-300">
+              TechStore
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* 🔹 Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors ${
-                  isActive(link.path) ? "text-primary" : "text-gray-300 hover:text-white"
+                className={`text-sm font-medium tracking-wide transition-colors ${
+                  isActive(link.path)
+                    ? "text-indigo-400 border-b-2 border-indigo-500 pb-1"
+                    : "text-gray-400 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -43,8 +52,11 @@ function Navbar() {
             ))}
           </div>
 
-          {/* Mobile menu button */}
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-gray-300 hover:text-white">
+          {/* 🔹 Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-gray-300 hover:text-white transition"
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -54,21 +66,27 @@ function Navbar() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {isMenuOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
+              {isMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
             </svg>
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* 🔹 Mobile Navigation Dropdown */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-2">
+          <div className="md:hidden py-3 space-y-2 animate-fadeIn">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                  isActive(link.path) ? "bg-primary text-white" : "text-gray-300 hover:bg-dark-border hover:text-white"
+                className={`block px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  isActive(link.path)
+                    ? "bg-indigo-600 text-white shadow-md"
+                    : "text-gray-300 hover:bg-gray-800 hover:text-white"
                 }`}
               >
                 {link.label}
