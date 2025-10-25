@@ -156,7 +156,7 @@ This project can be deployed to:
 
 ## 📸 Screenshots
 
-![Homepage](![alt text](image.png))
+![Homepage]![alt text](image.png)
 ![alt text](image-1.png)
 *Modern homepage with hero section and featured products*
 
