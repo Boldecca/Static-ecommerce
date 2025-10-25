@@ -1,5 +1,3 @@
-"use client"
-
 function ProductCard({ image, name, price, category, onAddToCart }) {
   const handleAddToCart = () => {
     console.log(`Added ${name} to cart`)
